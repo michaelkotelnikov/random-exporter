@@ -1,0 +1,11 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: random-num-servicemonitor
+spec:
+  selector:
+    matchLabels:
+      app: name
+  endpoints:
+    - port: metrics
+      interval: 15s
